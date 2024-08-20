@@ -9,6 +9,7 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
+  BackgroundVariant,
 } from "@xyflow/react";
 
 import CustomNode from "../components/CustomNode";
@@ -23,13 +24,13 @@ const initNodes = [
   {
     id: "1",
     type: "custom",
-    data: { name: "Jane Doe", job: "CEO", emoji: "😎" },
+    data: { name: "Asim De", job: "CEO", emoji: "😎" },
     position: { x: 0, y: 50 },
   },
   {
     id: "2",
     type: "custom",
-    data: { name: "Tyler Weary", job: "Designer", emoji: "🤓" },
+    data: { name: "Chumki De", job: "Designer", emoji: "🤓" },
 
     position: { x: -200, y: 200 },
   },
@@ -78,7 +79,7 @@ export default function App() {
       >
         <Controls />
         <MiniMap />
-        <Background variant="dots" gap={12} size={1} />
+        <Background gap={12} size={1} variant={BackgroundVariant.Dots} />
       </ReactFlow>
     </div>
   );
